@@ -42,41 +42,17 @@
     .card-header h2 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; }
     .card-body { padding: 1.5rem; }
 
-    .field { margin-bottom: 1.25rem; }
-    .field:last-child { margin-bottom: 0; }
-    .field label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 6px; }
-    .field input, .field select { width: 100%; padding: 10px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 15px; color: var(--black); background: var(--white); transition: border-color 0.15s; appearance: none; -webkit-appearance: none; }
-    .field input:focus, .field select:focus { outline: none; border-color: var(--black); }
-    .field input::placeholder { color: var(--gray-400); }
-    .select-wrap { position: relative; }
-    .select-wrap::after { content: '▾'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--gray-600); font-size: 13px; }
-    .error-msg { font-size: 12px; color: var(--red); margin-top: 5px; display: none; }
+    /* INTRO CARD */
+    .intro-card { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; }
+    .intro-card p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+    .intro-card strong { color: var(--black); }
 
-    .bet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; }
-    .bet-chip { border: 1px solid var(--gray-200); border-radius: 2px; padding: 12px 8px; text-align: center; cursor: pointer; background: var(--white); transition: all 0.15s; user-select: none; }
-    .bet-chip:hover { border-color: var(--gray-800); }
-    .bet-chip.selected { border-color: var(--red); background: var(--red-light); }
-    .bet-chip.selected .chip-name { color: var(--red-dark); }
-    .chip-name { font-size: 13px; font-weight: 600; color: var(--black); display: block; }
-    .chip-desc { font-size: 11px; color: var(--gray-400); margin-top: 3px; display: block; }
+    /* BET BUTTON */
+    .bet-now-btn { display: block; width: 100%; padding: 16px; background: var(--black); color: var(--white); border: none; border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; text-decoration: none; transition: background 0.15s; margin-bottom: 0.75rem; }
+    .bet-now-btn:hover { background: var(--gray-800); }
+    .post-time { text-align: center; font-size: 12px; color: var(--gray-400); }
 
-    .horse-picks { display: flex; flex-direction: column; gap: 10px; }
-    .horse-row { display: flex; align-items: center; gap: 12px; }
-    .horse-row .pos-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-600); min-width: 58px; flex-shrink: 0; }
-    .horse-row .select-wrap { flex: 1; }
-
-    .counter-bar { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-    .counter-bar .bet-label { font-size: 14px; color: var(--gray-600); }
-    .counter-bar .bet-label strong { color: var(--black); font-size: 16px; }
-    .counter-bar .total-label { font-size: 12px; color: var(--gray-400); }
-    .counter-bar .total-label strong { color: var(--gray-800); }
-
-    .submit-btn { width: 100%; padding: 14px; background: var(--black); color: var(--white); border: none; border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.15s, opacity 0.15s; }
-    .submit-btn:hover:not(:disabled) { background: var(--gray-800); }
-    .submit-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-    .post-time { text-align: center; font-size: 12px; color: var(--gray-400); margin-top: 0.75rem; }
-    .sending-msg { text-align: center; font-size: 13px; color: var(--gray-600); margin-top: 0.75rem; display: none; }
-
+    /* GATE */
     .gate-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 2px; overflow: hidden; margin-bottom: 1.25rem; display: none; }
     .gate-header { background: var(--red); padding: 1rem 1.5rem; }
     .gate-header h2 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; color: var(--white); }
@@ -98,16 +74,19 @@
 
     .maxed-note { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 1.25rem; text-align: center; font-size: 14px; color: var(--gray-600); margin-bottom: 1rem; display: none; line-height: 1.6; }
 
+    /* COUNTER */
+    .counter-bar { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .counter-bar .bet-label { font-size: 14px; color: var(--gray-600); }
+    .counter-bar .bet-label strong { color: var(--black); font-size: 16px; }
+    .counter-bar .total-label { font-size: 12px; color: var(--gray-400); }
+    .counter-bar .total-label strong { color: var(--gray-800); }
+
+    /* SUCCESS */
     .success-card { display: none; }
     .check-circle { width: 56px; height: 56px; background: var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
     .check-circle svg { width: 26px; height: 26px; }
     .success-card h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 0.25rem; }
     .success-card .sub { font-size: 14px; color: var(--gray-600); margin-bottom: 1.25rem; }
-    .bet-receipt { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 1rem 1.25rem; text-align: left; margin-bottom: 1rem; }
-    .receipt-row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid var(--gray-200); }
-    .receipt-row:last-child { border-bottom: none; }
-    .r-label { color: var(--gray-600); }
-    .r-val { font-weight: 500; color: var(--black); text-align: right; max-width: 60%; }
     .bets-remaining { background: var(--green-light); border: 1px solid #bbf7d0; border-radius: 2px; padding: 0.75rem 1.25rem; margin-bottom: 1rem; font-size: 13px; color: var(--green); font-weight: 500; display: none; }
     .another-btn { background: none; border: 1px solid var(--gray-200); border-radius: 2px; padding: 11px 24px; font-family: 'Libre Franklin', sans-serif; font-size: 13px; font-weight: 500; color: var(--gray-800); cursor: pointer; transition: border-color 0.15s; }
     .another-btn:hover { border-color: var(--black); }
@@ -139,53 +118,11 @@
 
   <div class="container">
 
-    <!-- BET FORM -->
-    <div id="formWrap">
-      <div class="card">
-        <div class="card-header">
-          <div class="step-num">1</div>
-          <h2>Your information</h2>
-        </div>
-        <div class="card-body">
-          <div class="field">
-            <label>Full name</label>
-            <input type="text" id="nameInput" placeholder="First & last name" autocomplete="name"/>
-            <div class="error-msg" id="nameErr">Please enter your name.</div>
-          </div>
-          <div class="field">
-            <label>Email or phone</label>
-            <input type="text" id="contactInput" placeholder="So we can reach you if you win!" autocomplete="email"/>
-            <div class="error-msg" id="contactErr">Please enter your email or phone.</div>
-          </div>
-        </div>
-      </div>
+    <!-- MAIN BET SECTION -->
+    <div id="mainWrap">
 
-      <div class="card">
-        <div class="card-header">
-          <div class="step-num">2</div>
-          <h2>Choose your bet type</h2>
-        </div>
-        <div class="card-body">
-          <div class="bet-grid" id="betGrid">
-            <div class="bet-chip" data-type="Win"><span class="chip-name">Win</span><span class="chip-desc">Pick 1st place</span></div>
-            <div class="bet-chip" data-type="Place"><span class="chip-name">Place</span><span class="chip-desc">1st or 2nd</span></div>
-            <div class="bet-chip" data-type="Show"><span class="chip-name">Show</span><span class="chip-desc">Top 3 finish</span></div>
-            <div class="bet-chip" data-type="Exacta"><span class="chip-name">Exacta</span><span class="chip-desc">Exact 1st & 2nd</span></div>
-            <div class="bet-chip" data-type="Trifecta"><span class="chip-name">Trifecta</span><span class="chip-desc">Exact top 3</span></div>
-          </div>
-          <div class="error-msg" id="betTypeErr" style="margin-top:8px;">Please select a bet type.</div>
-        </div>
-      </div>
-
-      <div class="card" id="horseCard" style="display:none;">
-        <div class="card-header">
-          <div class="step-num">3</div>
-          <h2 id="horseCardTitle">Pick your horse</h2>
-        </div>
-        <div class="card-body">
-          <div class="horse-picks" id="horsePicks"></div>
-          <div class="error-msg" id="horseErr" style="margin-top:8px;">Please select all required horses.</div>
-        </div>
+      <div class="intro-card">
+        <p>Welcome to the Winners Circle betting booth! <strong>Your first bet is free.</strong> Click below to open the betting form, pick your horse, and submit. After your free bet, donate to the Family Support Center to unlock up to 4 more bets!</p>
       </div>
 
       <div class="counter-bar">
@@ -193,8 +130,9 @@
         <span class="total-label">Bets placed: <strong id="totalBets">0</strong></span>
       </div>
 
-      <button class="submit-btn" id="submitBtn" disabled>Place My Bet</button>
-      <div class="sending-msg" id="sendingMsg">Submitting your bet... 🌹</div>
+      <a id="betNowBtn" class="bet-now-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfKtvNIQ1F3aXiL3z_cIcQscXeYBEwtbkYleHFPwTENgnkvOg/viewform?usp=header" target="_blank" onclick="betPlaced()">
+        Place My Free Bet 🌹
+      </a>
       <p class="post-time">Betting closes at post time &mdash; 4:57 PM MT, Saturday May 2, 2026</p>
     </div>
 
@@ -202,7 +140,7 @@
     <div class="gate-card" id="gateCard">
       <div class="gate-header"><h2>Want more bets?</h2></div>
       <div class="gate-body">
-        <p>Donate to the Family Support Center to unlock additional bets. After donating you'll receive a code — enter it below to keep betting!</p>
+        <p>Donate to the Family Support Center to unlock additional bets. After donating you'll receive a code — enter it below to unlock more bets!</p>
         <a class="donate-link" href="https://secure.qgiv.com/for/kentuckyderby2026/" target="_blank">Donate to unlock more bets &rarr;</a>
         <div class="gate-divider"><span>Already have a code?</span></div>
         <div class="code-row">
@@ -219,7 +157,7 @@
       You've reached the maximum of 5 bets. Thank you so much for supporting the Family Support Center! 🌹 Good luck on race day!
     </div>
 
-    <!-- SUCCESS -->
+    <!-- SUCCESS / NEXT BET -->
     <div class="success-card" id="successCard">
       <div class="card">
         <div class="card-body" style="padding: 2rem 1.5rem; text-align:center;">
@@ -230,7 +168,6 @@
           </div>
           <h2 id="successTitle">Bet Placed!</h2>
           <p class="sub" id="successSub">Good luck at the races!</p>
-          <div class="bet-receipt" id="betReceipt"></div>
           <div class="bets-remaining" id="betsRemaining"></div>
           <button class="another-btn" id="anotherBtn">Place another bet</button>
         </div>
@@ -244,9 +181,6 @@
   </footer>
 
   <script>
-    const FORMSPREE_URL = 'https://formspree.io/f/mvzdvaqk';
-
-    // ── CODES: 'CODENAME': number_of_additional_bets ──
     const CODES = {
       'DERBY1': 1,
       'DERBY2': 2,
@@ -254,153 +188,44 @@
       'DERBY4': 4
     };
 
-    const MAX_BETS = 5; // 1 free + up to 4 donated
+    const MAX_BETS = 5;
 
-    const horses = [
-      "Renegade (4-1 fav)", "Commandment (5-1)", "The Puma (10-1)",
-      "Chief Wallabee (10-1)", "Emerging Market (15-1)", "Potente (20-1)",
-      "Further Ado", "Silent Tactic", "Albus", "Pavlovian",
-      "Right to Party", "Incredibolt", "Golden Tempo", "So Happy",
-      "Fulleffort", "Paladin", "Litmus Test", "Dueling Banjos",
-      "Mandate", "Sandman"
-    ];
-
-    let selectedType = null;
     let betsPlaced = 0;
     let betsAllowed = 1;
     let usedCodes = [];
 
-    const betGrid = document.getElementById('betGrid');
-    const horseCard = document.getElementById('horseCard');
-    const horseCardTitle = document.getElementById('horseCardTitle');
-    const horsePicks = document.getElementById('horsePicks');
-    const submitBtn = document.getElementById('submitBtn');
-    const formWrap = document.getElementById('formWrap');
+    const mainWrap = document.getElementById('mainWrap');
     const successCard = document.getElementById('successCard');
     const gateCard = document.getElementById('gateCard');
     const maxedNote = document.getElementById('maxedNote');
-    const sendingMsg = document.getElementById('sendingMsg');
+    const betNowBtn = document.getElementById('betNowBtn');
 
-    betGrid.querySelectorAll('.bet-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        betGrid.querySelectorAll('.bet-chip').forEach(c => c.classList.remove('selected'));
-        chip.classList.add('selected');
-        selectedType = chip.dataset.type;
-        document.getElementById('betTypeErr').style.display = 'none';
-        buildHorsePickers();
-        validate();
-      });
-    });
+    function betPlaced() {
+      // Small delay so the Google Form opens first, then show success
+      setTimeout(() => {
+        betsPlaced++;
+        const wasFree = betsPlaced === 1;
 
-    function buildHorsePickers() {
-      horsePicks.innerHTML = '';
-      const slots = selectedType === 'Exacta' ? 2 : selectedType === 'Trifecta' ? 3 : 1;
-      const labels = slots === 1 ? ['Your horse'] : slots === 2 ? ['1st place','2nd place'] : ['1st place','2nd place','3rd place'];
-      horseCardTitle.textContent = slots === 1 ? 'Pick your horse' : 'Pick your horses (in order)';
-      horseCard.style.display = 'block';
-      for (let i = 0; i < slots; i++) {
-        const row = document.createElement('div');
-        row.className = 'horse-row';
-        const lbl = document.createElement('span');
-        lbl.className = 'pos-label';
-        lbl.textContent = labels[i];
-        const wrap = document.createElement('div');
-        wrap.className = 'select-wrap';
-        const sel = document.createElement('select');
-        sel.id = 'horse_' + i;
-        sel.innerHTML = '<option value="">— Select a horse —</option>' +
-          horses.map(h => `<option value="${h}">${h}</option>`).join('');
-        sel.addEventListener('change', validate);
-        wrap.appendChild(sel);
-        row.appendChild(lbl);
-        row.appendChild(wrap);
-        horsePicks.appendChild(row);
-      }
-      validate();
+        document.getElementById('successTitle').textContent = wasFree ? 'Free Bet Placed!' : 'Bet Placed!';
+        document.getElementById('successSub').textContent = wasFree
+          ? 'Your first bet is on the house. Good luck!'
+          : 'Thanks for supporting the Family Support Center!';
+
+        const remaining = betsAllowed - betsPlaced;
+        const remEl = document.getElementById('betsRemaining');
+        if (remaining > 0) {
+          remEl.style.display = 'block';
+          remEl.textContent = `You have ${remaining} bet${remaining > 1 ? 's' : ''} remaining from your donation!`;
+        } else {
+          remEl.style.display = 'none';
+        }
+
+        mainWrap.style.display = 'none';
+        successCard.style.display = 'block';
+        updateCounter();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 500);
     }
-
-    function validate() {
-      const name = document.getElementById('nameInput').value.trim();
-      const contact = document.getElementById('contactInput').value.trim();
-      if (!name || !contact || !selectedType) { submitBtn.disabled = true; return; }
-      const slots = selectedType === 'Exacta' ? 2 : selectedType === 'Trifecta' ? 3 : 1;
-      for (let i = 0; i < slots; i++) {
-        const s = document.getElementById('horse_' + i);
-        if (!s || !s.value) { submitBtn.disabled = true; return; }
-      }
-      submitBtn.disabled = false;
-    }
-
-    document.getElementById('nameInput').addEventListener('input', validate);
-    document.getElementById('contactInput').addEventListener('input', validate);
-
-    submitBtn.addEventListener('click', async () => {
-      const name = document.getElementById('nameInput').value.trim();
-      const contact = document.getElementById('contactInput').value.trim();
-      if (!name) { document.getElementById('nameErr').style.display = 'block'; return; }
-      if (!contact) { document.getElementById('contactErr').style.display = 'block'; return; }
-
-      const slots = selectedType === 'Exacta' ? 2 : selectedType === 'Trifecta' ? 3 : 1;
-      const picks = [];
-      for (let i = 0; i < slots; i++) picks.push(document.getElementById('horse_' + i).value);
-      const pickStr = picks.join(' / ');
-      const wasFree = betsPlaced === 0;
-      const betNum = betsPlaced + 1;
-
-      // Disable button and show sending message
-      submitBtn.disabled = true;
-      sendingMsg.style.display = 'block';
-
-      // Send to Formspree
-      try {
-        await fetch(FORMSPREE_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            'Name': name,
-            'Contact': contact,
-            'Bet Number': betNum,
-            'Bet Type': selectedType,
-            'Horse Pick(s)': pickStr,
-            'Cost': wasFree ? 'Free' : 'Donated ($5-$20)'
-          })
-        });
-      } catch(e) {
-        // Fail silently — still show success to user
-      }
-
-      sendingMsg.style.display = 'none';
-      betsPlaced++;
-
-      document.getElementById('successTitle').textContent = wasFree ? 'Free Bet Placed!' : 'Bet Placed!';
-      document.getElementById('successSub').textContent = wasFree
-        ? 'Your first bet is on the house. Good luck!'
-        : 'Thanks for supporting the Family Support Center!';
-
-      document.getElementById('betReceipt').innerHTML = `
-        <div class="receipt-row"><span class="r-label">Bettor</span><span class="r-val">${name}</span></div>
-        <div class="receipt-row"><span class="r-label">Bet type</span><span class="r-val">${selectedType}</span></div>
-        <div class="receipt-row"><span class="r-label">Horse(s)</span><span class="r-val">${pickStr}</span></div>
-        <div class="receipt-row"><span class="r-label">Contact</span><span class="r-val">${contact}</span></div>
-        <div class="receipt-row"><span class="r-label">Cost</span><span class="r-val">${wasFree ? 'Free!' : 'Donated'}</span></div>
-      `;
-
-      const remaining = betsAllowed - betsPlaced;
-      const remEl = document.getElementById('betsRemaining');
-      if (remaining > 0) {
-        remEl.style.display = 'block';
-        remEl.textContent = `You have ${remaining} bet${remaining > 1 ? 's' : ''} remaining from your donation!`;
-      } else {
-        remEl.style.display = 'none';
-      }
-
-      formWrap.style.display = 'none';
-      gateCard.style.display = 'none';
-      maxedNote.style.display = 'none';
-      successCard.style.display = 'block';
-      updateCounter();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 
     function redeemCode() {
       const input = document.getElementById('codeInput').value.trim().toUpperCase();
@@ -424,19 +249,16 @@
 
       setTimeout(() => {
         gateCard.style.display = 'none';
-        resetForm();
-        formWrap.style.display = 'block';
-        updateCounter();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showBetForm();
       }, 2000);
     }
 
-    function resetForm() {
-      selectedType = null;
-      betGrid.querySelectorAll('.bet-chip').forEach(c => c.classList.remove('selected'));
-      horseCard.style.display = 'none';
-      horsePicks.innerHTML = '';
-      submitBtn.disabled = true;
+    function showBetForm() {
+      const wasFree = betsPlaced === 0;
+      betNowBtn.textContent = wasFree ? 'Place My Free Bet 🌹' : 'Place My Next Bet 🌹';
+      mainWrap.style.display = 'block';
+      updateCounter();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function updateCounter() {
@@ -463,10 +285,7 @@
         return;
       }
 
-      resetForm();
-      formWrap.style.display = 'block';
-      updateCounter();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      showBetForm();
     });
 
     updateCounter();

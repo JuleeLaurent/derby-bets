@@ -19,379 +19,116 @@
       --gray-400: #a09e9a;
       --gray-600: #6b6865;
       --gray-800: #302f2d;
+      --green: #166534;
+      --green-light: #dcfce7;
     }
 
-    body {
-      font-family: 'Libre Franklin', sans-serif;
-      background: var(--white);
-      color: var(--black);
-      min-height: 100vh;
-    }
+    body { font-family: 'Libre Franklin', sans-serif; background: var(--white); color: var(--black); min-height: 100vh; }
 
-    /* ── HERO HEADER ── */
     .hero {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-      padding: 3rem 1.5rem 2.5rem;
-      position: relative;
-      overflow: hidden;
+      background: var(--black); color: var(--white); text-align: center;
+      padding: 3rem 1.5rem 2.5rem; position: relative; overflow: hidden;
     }
     .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 18px,
-        rgba(185,28,28,0.08) 18px,
-        rgba(185,28,28,0.08) 19px
-      );
+      content: ''; position: absolute; inset: 0;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(185,28,28,0.08) 18px, rgba(185,28,28,0.08) 19px);
     }
     .hero-inner { position: relative; z-index: 1; }
-    .roses {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 1.25rem;
-    }
-    .rose-icon {
-      font-size: 22px;
-      animation: sway 3s ease-in-out infinite;
-    }
+    .roses { display: flex; justify-content: center; gap: 10px; margin-bottom: 1.25rem; }
+    .rose-icon { font-size: 22px; animation: sway 3s ease-in-out infinite; }
     .rose-icon:nth-child(2) { animation-delay: 0.3s; }
     .rose-icon:nth-child(3) { animation-delay: 0.6s; }
     .rose-icon:nth-child(4) { animation-delay: 0.9s; }
     .rose-icon:nth-child(5) { animation-delay: 1.2s; }
-    @keyframes sway {
-      0%, 100% { transform: rotate(-5deg); }
-      50% { transform: rotate(5deg); }
-    }
-    .hero-eyebrow {
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 0.5rem;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 6vw, 3.25rem);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-    }
-    .hero-sub {
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--gray-400);
-      letter-spacing: 0.04em;
-    }
-    .hero-rule {
-      width: 60px;
-      height: 2px;
-      background: var(--red);
-      margin: 1.25rem auto 0;
-    }
+    @keyframes sway { 0%,100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+    .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 6vw, 3.25rem); font-weight: 700; line-height: 1.1; margin-bottom: 0.5rem; }
+    .hero-sub { font-size: 14px; font-weight: 300; color: var(--gray-400); letter-spacing: 0.04em; }
+    .hero-rule { width: 60px; height: 2px; background: var(--red); margin: 1.25rem auto 0; }
 
-    /* ── FREE BET BANNER ── */
-    .banner {
-      background: var(--red);
-      color: var(--white);
-      text-align: center;
-      padding: 0.65rem 1.5rem;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-    }
+    .banner { background: var(--red); color: var(--white); text-align: center; padding: 0.65rem 1.5rem; font-size: 13px; font-weight: 500; letter-spacing: 0.03em; }
     .banner strong { font-weight: 700; }
 
-    /* ── MAIN LAYOUT ── */
-    .container {
-      max-width: 580px;
-      margin: 0 auto;
-      padding: 2rem 1.25rem 4rem;
-    }
+    .container { max-width: 580px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
 
-    /* ── FORM CARD ── */
-    .card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    .card-header {
-      background: var(--gray-100);
-      border-bottom: 1px solid var(--gray-200);
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .step-num {
-      width: 24px;
-      height: 24px;
-      background: var(--black);
-      color: var(--white);
-      border-radius: 50%;
-      font-size: 12px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .card-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 600;
-    }
+    .card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 2px; overflow: hidden; margin-bottom: 1.25rem; }
+    .card-header { background: var(--gray-100); border-bottom: 1px solid var(--gray-200); padding: 1rem 1.5rem; display: flex; align-items: center; gap: 10px; }
+    .step-num { width: 24px; height: 24px; background: var(--black); color: var(--white); border-radius: 50%; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .card-header h2 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; }
     .card-body { padding: 1.5rem; }
 
-    /* ── FORM FIELDS ── */
     .field { margin-bottom: 1.25rem; }
     .field:last-child { margin-bottom: 0; }
-    .field label {
-      display: block;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gray-600);
-      margin-bottom: 6px;
-    }
-    .field input, .field select {
-      width: 100%;
-      padding: 10px 14px;
-      border: 1px solid var(--gray-200);
-      border-radius: 2px;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 15px;
-      color: var(--black);
-      background: var(--white);
-      transition: border-color 0.15s;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-    .field input:focus, .field select:focus {
-      outline: none;
-      border-color: var(--black);
-    }
+    .field label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 6px; }
+    .field input, .field select { width: 100%; padding: 10px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 15px; color: var(--black); background: var(--white); transition: border-color 0.15s; appearance: none; -webkit-appearance: none; }
+    .field input:focus, .field select:focus { outline: none; border-color: var(--black); }
     .field input::placeholder { color: var(--gray-400); }
     .select-wrap { position: relative; }
-    .select-wrap::after {
-      content: '▾';
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-      color: var(--gray-600);
-      font-size: 13px;
-    }
-    .error-msg {
-      font-size: 12px;
-      color: var(--red);
-      margin-top: 5px;
-      display: none;
-    }
+    .select-wrap::after { content: '▾'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--gray-600); font-size: 13px; }
+    .error-msg { font-size: 12px; color: var(--red); margin-top: 5px; display: none; }
 
-    /* ── SECTION DIVIDER ── */
-    .section-gap { margin: 1.75rem 0 0; }
-
-    /* ── BET TYPE CHIPS ── */
-    .bet-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
-      gap: 8px;
-    }
-    .bet-chip {
-      border: 1px solid var(--gray-200);
-      border-radius: 2px;
-      padding: 12px 8px;
-      text-align: center;
-      cursor: pointer;
-      background: var(--white);
-      transition: all 0.15s;
-      user-select: none;
-    }
+    .bet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; }
+    .bet-chip { border: 1px solid var(--gray-200); border-radius: 2px; padding: 12px 8px; text-align: center; cursor: pointer; background: var(--white); transition: all 0.15s; user-select: none; }
     .bet-chip:hover { border-color: var(--gray-800); }
-    .bet-chip.selected {
-      border-color: var(--red);
-      background: var(--red-light);
-    }
+    .bet-chip.selected { border-color: var(--red); background: var(--red-light); }
     .bet-chip.selected .chip-name { color: var(--red-dark); }
-    .chip-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--black);
-      display: block;
-    }
-    .chip-desc {
-      font-size: 11px;
-      color: var(--gray-400);
-      margin-top: 3px;
-      display: block;
-    }
+    .chip-name { font-size: 13px; font-weight: 600; color: var(--black); display: block; }
+    .chip-desc { font-size: 11px; color: var(--gray-400); margin-top: 3px; display: block; }
 
-    /* ── HORSE PICKS ── */
     .horse-picks { display: flex; flex-direction: column; gap: 10px; }
     .horse-row { display: flex; align-items: center; gap: 12px; }
-    .horse-row .pos-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gray-600);
-      min-width: 58px;
-      flex-shrink: 0;
-    }
+    .horse-row .pos-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-600); min-width: 58px; flex-shrink: 0; }
     .horse-row .select-wrap { flex: 1; }
 
-    /* ── BET COUNTER BAR ── */
-    .counter-bar {
-      background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      border-radius: 2px;
-      padding: 0.85rem 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
+    .counter-bar { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
     .counter-bar .bet-label { font-size: 14px; color: var(--gray-600); }
     .counter-bar .bet-label strong { color: var(--black); font-size: 16px; }
     .counter-bar .total-label { font-size: 12px; color: var(--gray-400); }
     .counter-bar .total-label strong { color: var(--gray-800); }
 
-    /* ── SUBMIT BUTTON ── */
-    .submit-btn {
-      width: 100%;
-      padding: 14px;
-      background: var(--black);
-      color: var(--white);
-      border: none;
-      border-radius: 2px;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.15s, opacity 0.15s;
-    }
+    .submit-btn { width: 100%; padding: 14px; background: var(--black); color: var(--white); border: none; border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.15s, opacity 0.15s; }
     .submit-btn:hover:not(:disabled) { background: var(--gray-800); }
     .submit-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .post-time { text-align: center; font-size: 12px; color: var(--gray-400); margin-top: 0.75rem; letter-spacing: 0.04em; }
 
-    .post-time {
-      text-align: center;
-      font-size: 12px;
-      color: var(--gray-400);
-      margin-top: 0.75rem;
-      letter-spacing: 0.04em;
-    }
-
-    /* ── SUCCESS CARD ── */
-    .success-card {
-      display: none;
-      text-align: center;
-    }
-    .check-circle {
-      width: 56px;
-      height: 56px;
-      background: var(--black);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.25rem;
-    }
-    .check-circle svg { width: 26px; height: 26px; }
-    .success-card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-    .success-card .sub { font-size: 14px; color: var(--gray-600); margin-bottom: 1.25rem; }
-    .bet-receipt {
-      background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      border-radius: 2px;
-      padding: 1rem 1.25rem;
-      text-align: left;
-      margin-bottom: 1.25rem;
-    }
-    .bet-receipt .receipt-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 13px;
-      padding: 4px 0;
-      border-bottom: 1px solid var(--gray-200);
-    }
-    .bet-receipt .receipt-row:last-child { border-bottom: none; }
-    .bet-receipt .receipt-row .r-label { color: var(--gray-600); }
-    .bet-receipt .receipt-row .r-val { font-weight: 500; color: var(--black); text-align: right; max-width: 60%; }
-
-    .donate-block {
-      display: none;
-      background: var(--red-light);
-      border: 1px solid #fca5a5;
-      border-radius: 2px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .donate-block p {
-      font-size: 13px;
-      color: var(--red-dark);
-      margin-bottom: 0.75rem;
-      font-weight: 500;
-    }
-    .donate-link {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: var(--red);
-      color: var(--white);
-      border-radius: 2px;
-      text-align: center;
-      text-decoration: none;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background 0.15s;
-    }
+    /* GATE */
+    .gate-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 2px; overflow: hidden; margin-bottom: 1.25rem; display: none; }
+    .gate-header { background: var(--red); padding: 1rem 1.5rem; }
+    .gate-header h2 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; color: var(--white); }
+    .gate-body { padding: 1.5rem; }
+    .gate-body p { font-size: 14px; color: var(--gray-600); margin-bottom: 1.25rem; line-height: 1.6; }
+    .donate-link { display: block; width: 100%; padding: 13px; background: var(--red); color: var(--white); border-radius: 2px; text-align: center; text-decoration: none; font-family: 'Libre Franklin', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.15s; margin-bottom: 1.25rem; }
     .donate-link:hover { background: var(--red-dark); }
+    .gate-divider { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
+    .gate-divider::before, .gate-divider::after { content: ''; flex: 1; height: 1px; background: var(--gray-200); }
+    .gate-divider span { font-size: 12px; color: var(--gray-400); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+    .code-row { display: flex; gap: 8px; }
+    .code-row input { flex: 1; padding: 10px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 15px; color: var(--black); background: var(--white); text-transform: uppercase; letter-spacing: 0.1em; transition: border-color 0.15s; }
+    .code-row input:focus { outline: none; border-color: var(--black); }
+    .code-row input::placeholder { text-transform: none; letter-spacing: normal; color: var(--gray-400); }
+    .code-btn { padding: 10px 20px; background: var(--black); color: var(--white); border: none; border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+    .code-btn:hover { background: var(--gray-800); }
+    .code-success { background: var(--green-light); border: 1px solid #bbf7d0; border-radius: 2px; padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 13px; color: var(--green); font-weight: 500; display: none; }
+    .code-error { font-size: 12px; color: var(--red); margin-top: 6px; display: none; }
 
-    .another-btn {
-      background: none;
-      border: 1px solid var(--gray-200);
-      border-radius: 2px;
-      padding: 11px 24px;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--gray-800);
-      cursor: pointer;
-      transition: border-color 0.15s;
-    }
+    .maxed-note { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 1.25rem; text-align: center; font-size: 14px; color: var(--gray-600); margin-bottom: 1rem; display: none; line-height: 1.6; }
+
+    /* SUCCESS */
+    .success-card { display: none; }
+    .check-circle { width: 56px; height: 56px; background: var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+    .check-circle svg { width: 26px; height: 26px; }
+    .success-card h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 0.25rem; }
+    .success-card .sub { font-size: 14px; color: var(--gray-600); margin-bottom: 1.25rem; }
+    .bet-receipt { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 1rem 1.25rem; text-align: left; margin-bottom: 1rem; }
+    .receipt-row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid var(--gray-200); }
+    .receipt-row:last-child { border-bottom: none; }
+    .r-label { color: var(--gray-600); }
+    .r-val { font-weight: 500; color: var(--black); text-align: right; max-width: 60%; }
+    .bets-remaining { background: var(--green-light); border: 1px solid #bbf7d0; border-radius: 2px; padding: 0.75rem 1.25rem; margin-bottom: 1rem; font-size: 13px; color: var(--green); font-weight: 500; display: none; }
+    .another-btn { background: none; border: 1px solid var(--gray-200); border-radius: 2px; padding: 11px 24px; font-family: 'Libre Franklin', sans-serif; font-size: 13px; font-weight: 500; color: var(--gray-800); cursor: pointer; transition: border-color 0.15s; }
     .another-btn:hover { border-color: var(--black); }
 
-    /* ── FOOTER ── */
-    .footer {
-      text-align: center;
-      padding: 1.5rem 1rem 2rem;
-      font-size: 12px;
-      color: var(--gray-400);
-      border-top: 1px solid var(--gray-200);
-      letter-spacing: 0.03em;
-    }
+    .footer { text-align: center; padding: 1.5rem 1rem 2rem; font-size: 12px; color: var(--gray-400); border-top: 1px solid var(--gray-200); letter-spacing: 0.03em; }
     .footer a { color: var(--red); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
   </style>
@@ -401,10 +138,8 @@
   <header class="hero">
     <div class="hero-inner">
       <div class="roses">
-        <span class="rose-icon">🌹</span>
-        <span class="rose-icon">🌹</span>
-        <span class="rose-icon">🌹</span>
-        <span class="rose-icon">🌹</span>
+        <span class="rose-icon">🌹</span><span class="rose-icon">🌹</span>
+        <span class="rose-icon">🌹</span><span class="rose-icon">🌹</span>
         <span class="rose-icon">🌹</span>
       </div>
       <p class="hero-eyebrow">152nd Kentucky Derby &mdash; May 2, 2026</p>
@@ -415,14 +150,14 @@
   </header>
 
   <div class="banner">
-    Your <strong>first bet is free</strong> &mdash; each additional bet is a <strong>$5 donation</strong> to the Family Support Center
+    Your <strong>first bet is free</strong> &mdash; donate to unlock up to <strong>4 more bets!</strong>
   </div>
 
   <div class="container">
 
-    <!-- FORM -->
+    <!-- BET FORM -->
     <div id="formWrap">
-      <div class="card" style="margin-bottom: 1.25rem;">
+      <div class="card">
         <div class="card-header">
           <div class="step-num">1</div>
           <h2>Your information</h2>
@@ -441,39 +176,24 @@
         </div>
       </div>
 
-      <div class="card" style="margin-bottom: 1.25rem;">
+      <div class="card">
         <div class="card-header">
           <div class="step-num">2</div>
           <h2>Choose your bet type</h2>
         </div>
         <div class="card-body">
           <div class="bet-grid" id="betGrid">
-            <div class="bet-chip" data-type="Win">
-              <span class="chip-name">Win</span>
-              <span class="chip-desc">Pick 1st place</span>
-            </div>
-            <div class="bet-chip" data-type="Place">
-              <span class="chip-name">Place</span>
-              <span class="chip-desc">1st or 2nd</span>
-            </div>
-            <div class="bet-chip" data-type="Show">
-              <span class="chip-name">Show</span>
-              <span class="chip-desc">Top 3 finish</span>
-            </div>
-            <div class="bet-chip" data-type="Exacta">
-              <span class="chip-name">Exacta</span>
-              <span class="chip-desc">Exact 1st & 2nd</span>
-            </div>
-            <div class="bet-chip" data-type="Trifecta">
-              <span class="chip-name">Trifecta</span>
-              <span class="chip-desc">Exact top 3</span>
-            </div>
+            <div class="bet-chip" data-type="Win"><span class="chip-name">Win</span><span class="chip-desc">Pick 1st place</span></div>
+            <div class="bet-chip" data-type="Place"><span class="chip-name">Place</span><span class="chip-desc">1st or 2nd</span></div>
+            <div class="bet-chip" data-type="Show"><span class="chip-name">Show</span><span class="chip-desc">Top 3 finish</span></div>
+            <div class="bet-chip" data-type="Exacta"><span class="chip-name">Exacta</span><span class="chip-desc">Exact 1st & 2nd</span></div>
+            <div class="bet-chip" data-type="Trifecta"><span class="chip-name">Trifecta</span><span class="chip-desc">Exact top 3</span></div>
           </div>
           <div class="error-msg" id="betTypeErr" style="margin-top:8px;">Please select a bet type.</div>
         </div>
       </div>
 
-      <div class="card" id="horseCard" style="margin-bottom: 1.5rem; display:none;">
+      <div class="card" id="horseCard" style="display:none;">
         <div class="card-header">
           <div class="step-num">3</div>
           <h2 id="horseCardTitle">Pick your horse</h2>
@@ -493,10 +213,33 @@
       <p class="post-time">Betting closes at post time &mdash; 4:57 PM MT, Saturday May 2, 2026</p>
     </div>
 
+    <!-- DONATE / CODE GATE -->
+    <div class="gate-card" id="gateCard">
+      <div class="gate-header"><h2>Want more bets?</h2></div>
+      <div class="gate-body">
+        <p>Donate to the Family Support Center to unlock additional bets. Choose your amount, then enter the code you receive below.</p>
+        <a class="donate-link" href="https://secure.qgiv.com/for/kentuckyderby2026/" target="_blank">
+          Donate to unlock more bets &rarr;
+        </a>
+        <div class="gate-divider"><span>Already have a code?</span></div>
+        <div class="code-row">
+          <input type="text" id="codeInput" placeholder="Enter your code" maxlength="10"/>
+          <button class="code-btn" onclick="redeemCode()">Redeem</button>
+        </div>
+        <div class="code-error" id="codeError"></div>
+        <div class="code-success" id="codeSuccess"></div>
+      </div>
+    </div>
+
+    <!-- MAXED OUT -->
+    <div class="maxed-note" id="maxedNote">
+      You've reached the maximum of 5 bets. Thank you so much for supporting the Family Support Center! 🌹 Good luck on race day!
+    </div>
+
     <!-- SUCCESS -->
     <div class="success-card" id="successCard">
       <div class="card">
-        <div class="card-body" style="padding: 2rem 1.5rem;">
+        <div class="card-body" style="padding: 2rem 1.5rem; text-align:center;">
           <div class="check-circle">
             <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12"></polyline>
@@ -504,16 +247,8 @@
           </div>
           <h2 id="successTitle">Bet Placed!</h2>
           <p class="sub" id="successSub">Good luck at the races!</p>
-
           <div class="bet-receipt" id="betReceipt"></div>
-
-          <div class="donate-block" id="donateBlock">
-            <p>Your next bet requires a $5 donation to the Family Support Center.</p>
-            <a class="donate-link" href="https://secure.qgiv.com/for/thewinnerscircleappreciationsocial/?blm_aid=13872129" target="_blank">
-              Donate $5 &rarr; Place Another Bet
-            </a>
-          </div>
-
+          <div class="bets-remaining" id="betsRemaining"></div>
           <button class="another-btn" id="anotherBtn">Place another bet</button>
         </div>
       </div>
@@ -522,10 +257,21 @@
   </div>
 
   <footer class="footer">
-    <p>Benefiting the <a href="https://secure.qgiv.com/for/thewinnerscircleappreciationsocial/?blm_aid=13872129" target="_blank">Family Support Center</a> &mdash; The Winners Circle Appreciation Social 2026</p>
+    <p>Benefiting the <a href="https://secure.qgiv.com/for/kentuckyderby2026/" target="_blank">Family Support Center</a> &mdash; The Winners Circle Appreciation Social 2026</p>
   </footer>
 
   <script>
+    // ── CODES: edit these to whatever words you want to use ──
+    // Format: 'CODE': number_of_additional_bets
+    const CODES = {
+      'DERBY1': 1,
+      'DERBY2': 2,
+      'DERBY3': 3,
+      'DERBY4': 4
+    };
+
+    const MAX_BETS = 5; // 1 free + up to 4 donated
+
     const horses = [
       "Renegade (4-1 fav)",
       "Commandment (5-1)",
@@ -550,8 +296,9 @@
     ];
 
     let selectedType = null;
-    let betCount = 0;
-    let isFirstBet = true;
+    let betsPlaced = 0;
+    let betsAllowed = 1;
+    let usedCodes = [];
 
     const betGrid = document.getElementById('betGrid');
     const horseCard = document.getElementById('horseCard');
@@ -560,6 +307,8 @@
     const submitBtn = document.getElementById('submitBtn');
     const formWrap = document.getElementById('formWrap');
     const successCard = document.getElementById('successCard');
+    const gateCard = document.getElementById('gateCard');
+    const maxedNote = document.getElementById('maxedNote');
 
     betGrid.querySelectorAll('.bet-chip').forEach(chip => {
       chip.addEventListener('click', () => {
@@ -620,52 +369,119 @@
       if (!name) { document.getElementById('nameErr').style.display = 'block'; return; }
       if (!contact) { document.getElementById('contactErr').style.display = 'block'; return; }
 
-      betCount++;
       const slots = selectedType === 'Exacta' ? 2 : selectedType === 'Trifecta' ? 3 : 1;
       const picks = [];
       for (let i = 0; i < slots; i++) picks.push(document.getElementById('horse_' + i).value);
-
-      let pickStr = '';
-      if (slots === 1) pickStr = picks[0];
-      else if (slots === 2) pickStr = picks[0] + ' / ' + picks[1];
-      else pickStr = picks[0] + ' / ' + picks[1] + ' / ' + picks[2];
-
-      const wasFree = isFirstBet;
-      isFirstBet = false;
+      const pickStr = picks.join(' / ');
+      const wasFree = betsPlaced === 0;
+      betsPlaced++;
 
       document.getElementById('successTitle').textContent = wasFree ? 'Free Bet Placed!' : 'Bet Placed!';
-      document.getElementById('successSub').textContent = wasFree ? 'Your first bet is on the house. Good luck!' : 'Thanks for supporting the Family Support Center!';
+      document.getElementById('successSub').textContent = wasFree
+        ? 'Your first bet is on the house. Good luck!'
+        : 'Thanks for supporting the Family Support Center!';
 
       document.getElementById('betReceipt').innerHTML = `
         <div class="receipt-row"><span class="r-label">Bettor</span><span class="r-val">${name}</span></div>
         <div class="receipt-row"><span class="r-label">Bet type</span><span class="r-val">${selectedType}</span></div>
         <div class="receipt-row"><span class="r-label">Horse(s)</span><span class="r-val">${pickStr}</span></div>
         <div class="receipt-row"><span class="r-label">Contact</span><span class="r-val">${contact}</span></div>
-        <div class="receipt-row"><span class="r-label">Cost</span><span class="r-val">${wasFree ? 'Free!' : '$5 donation'}</span></div>
+        <div class="receipt-row"><span class="r-label">Cost</span><span class="r-val">${wasFree ? 'Free!' : 'Donated'}</span></div>
       `;
 
-      document.getElementById('donateBlock').style.display = wasFree ? 'block' : 'none';
+      const remaining = betsAllowed - betsPlaced;
+      const remEl = document.getElementById('betsRemaining');
+      if (remaining > 0) {
+        remEl.style.display = 'block';
+        remEl.textContent = `You have ${remaining} bet${remaining > 1 ? 's' : ''} remaining from your donation!`;
+      } else {
+        remEl.style.display = 'none';
+      }
 
       formWrap.style.display = 'none';
+      gateCard.style.display = 'none';
+      maxedNote.style.display = 'none';
       successCard.style.display = 'block';
       updateCounter();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    function updateCounter() {
-      document.getElementById('betNum').textContent = betCount + 1;
-      document.getElementById('totalBets').textContent = betCount;
-      document.getElementById('betCostLabel').textContent = isFirstBet ? 'Free!' : '$5 donation';
+    function redeemCode() {
+      const input = document.getElementById('codeInput').value.trim().toUpperCase();
+      const errEl = document.getElementById('codeError');
+      const okEl = document.getElementById('codeSuccess');
+      errEl.style.display = 'none';
+      okEl.style.display = 'none';
+
+      if (!input) {
+        errEl.textContent = 'Please enter a code.';
+        errEl.style.display = 'block';
+        return;
+      }
+      if (usedCodes.includes(input)) {
+        errEl.textContent = 'This code has already been used.';
+        errEl.style.display = 'block';
+        return;
+      }
+      if (!CODES[input]) {
+        errEl.textContent = "That code isn't valid. Please check and try again.";
+        errEl.style.display = 'block';
+        return;
+      }
+
+      const bonus = CODES[input];
+      usedCodes.push(input);
+      betsAllowed = Math.min(betsAllowed + bonus, MAX_BETS);
+      document.getElementById('codeInput').value = '';
+
+      const newRemaining = betsAllowed - betsPlaced;
+      okEl.textContent = `Code accepted! You've unlocked ${bonus} additional bet${bonus > 1 ? 's' : ''}. You have ${newRemaining} bet${newRemaining > 1 ? 's' : ''} to place.`;
+      okEl.style.display = 'block';
+
+      setTimeout(() => {
+        gateCard.style.display = 'none';
+        resetForm();
+        formWrap.style.display = 'block';
+        updateCounter();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 2000);
     }
 
-    document.getElementById('anotherBtn').addEventListener('click', () => {
+    function resetForm() {
       selectedType = null;
       betGrid.querySelectorAll('.bet-chip').forEach(c => c.classList.remove('selected'));
       horseCard.style.display = 'none';
       horsePicks.innerHTML = '';
       submitBtn.disabled = true;
+    }
+
+    function updateCounter() {
+      document.getElementById('betNum').textContent = betsPlaced + 1;
+      document.getElementById('totalBets').textContent = betsPlaced;
+      document.getElementById('betCostLabel').textContent = betsPlaced === 0 ? 'Free!' : 'Donated';
+    }
+
+    document.getElementById('anotherBtn').addEventListener('click', () => {
       successCard.style.display = 'none';
+
+      if (betsPlaced >= MAX_BETS) {
+        maxedNote.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      if (betsPlaced >= betsAllowed) {
+        gateCard.style.display = 'block';
+        document.getElementById('codeError').style.display = 'none';
+        document.getElementById('codeSuccess').style.display = 'none';
+        document.getElementById('codeInput').value = '';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      resetForm();
       formWrap.style.display = 'block';
+      updateCounter();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 

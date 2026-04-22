@@ -7,32 +7,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --black: #111010;
-      --white: #faf9f7;
-      --red: #b91c1c;
-      --red-light: #fee2e2;
-      --red-dark: #7f1d1d;
-      --gray-100: #f4f3f0;
-      --gray-200: #e5e3df;
-      --gray-400: #a09e9a;
-      --gray-600: #6b6865;
-      --gray-800: #302f2d;
-      --green: #166534;
-      --green-light: #dcfce7;
+      --black: #111010; --white: #faf9f7; --red: #b91c1c;
+      --red-light: #fee2e2; --red-dark: #7f1d1d;
+      --gray-100: #f4f3f0; --gray-200: #e5e3df;
+      --gray-400: #a09e9a; --gray-600: #6b6865; --gray-800: #302f2d;
+      --green: #166534; --green-light: #dcfce7;
     }
-
     body { font-family: 'Libre Franklin', sans-serif; background: var(--white); color: var(--black); min-height: 100vh; }
 
-    .hero {
-      background: var(--black); color: var(--white); text-align: center;
-      padding: 3rem 1.5rem 2.5rem; position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(185,28,28,0.08) 18px, rgba(185,28,28,0.08) 19px);
-    }
+    .hero { background: var(--black); color: var(--white); text-align: center; padding: 3rem 1.5rem 2.5rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(185,28,28,0.08) 18px, rgba(185,28,28,0.08) 19px); }
     .hero-inner { position: relative; z-index: 1; }
     .roses { display: flex; justify-content: center; gap: 10px; margin-bottom: 1.25rem; }
     .rose-icon { font-size: 22px; animation: sway 3s ease-in-out infinite; }
@@ -46,7 +31,7 @@
     .hero-sub { font-size: 14px; font-weight: 300; color: var(--gray-400); letter-spacing: 0.04em; }
     .hero-rule { width: 60px; height: 2px; background: var(--red); margin: 1.25rem auto 0; }
 
-    .banner { background: var(--red); color: var(--white); text-align: center; padding: 0.65rem 1.5rem; font-size: 13px; font-weight: 500; letter-spacing: 0.03em; }
+    .banner { background: var(--red); color: var(--white); text-align: center; padding: 0.65rem 1.5rem; font-size: 13px; font-weight: 500; }
     .banner strong { font-weight: 700; }
 
     .container { max-width: 580px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
@@ -89,9 +74,9 @@
     .submit-btn { width: 100%; padding: 14px; background: var(--black); color: var(--white); border: none; border-radius: 2px; font-family: 'Libre Franklin', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.15s, opacity 0.15s; }
     .submit-btn:hover:not(:disabled) { background: var(--gray-800); }
     .submit-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-    .post-time { text-align: center; font-size: 12px; color: var(--gray-400); margin-top: 0.75rem; letter-spacing: 0.04em; }
+    .post-time { text-align: center; font-size: 12px; color: var(--gray-400); margin-top: 0.75rem; }
+    .sending-msg { text-align: center; font-size: 13px; color: var(--gray-600); margin-top: 0.75rem; display: none; }
 
-    /* GATE */
     .gate-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 2px; overflow: hidden; margin-bottom: 1.25rem; display: none; }
     .gate-header { background: var(--red); padding: 1rem 1.5rem; }
     .gate-header h2 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; color: var(--white); }
@@ -113,7 +98,6 @@
 
     .maxed-note { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 2px; padding: 1.25rem; text-align: center; font-size: 14px; color: var(--gray-600); margin-bottom: 1rem; display: none; line-height: 1.6; }
 
-    /* SUCCESS */
     .success-card { display: none; }
     .check-circle { width: 56px; height: 56px; background: var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
     .check-circle svg { width: 26px; height: 26px; }
@@ -128,7 +112,7 @@
     .another-btn { background: none; border: 1px solid var(--gray-200); border-radius: 2px; padding: 11px 24px; font-family: 'Libre Franklin', sans-serif; font-size: 13px; font-weight: 500; color: var(--gray-800); cursor: pointer; transition: border-color 0.15s; }
     .another-btn:hover { border-color: var(--black); }
 
-    .footer { text-align: center; padding: 1.5rem 1rem 2rem; font-size: 12px; color: var(--gray-400); border-top: 1px solid var(--gray-200); letter-spacing: 0.03em; }
+    .footer { text-align: center; padding: 1.5rem 1rem 2rem; font-size: 12px; color: var(--gray-400); border-top: 1px solid var(--gray-200); }
     .footer a { color: var(--red); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
   </style>
@@ -210,6 +194,7 @@
       </div>
 
       <button class="submit-btn" id="submitBtn" disabled>Place My Bet</button>
+      <div class="sending-msg" id="sendingMsg">Submitting your bet... 🌹</div>
       <p class="post-time">Betting closes at post time &mdash; 4:57 PM MT, Saturday May 2, 2026</p>
     </div>
 
@@ -217,10 +202,8 @@
     <div class="gate-card" id="gateCard">
       <div class="gate-header"><h2>Want more bets?</h2></div>
       <div class="gate-body">
-        <p>Donate to the Family Support Center to unlock additional bets. Choose your amount, then enter the code you receive below.</p>
-        <a class="donate-link" href="https://secure.qgiv.com/for/kentuckyderby2026/" target="_blank">
-          Donate to unlock more bets &rarr;
-        </a>
+        <p>Donate to the Family Support Center to unlock additional bets. After donating you'll receive a code — enter it below to keep betting!</p>
+        <a class="donate-link" href="https://secure.qgiv.com/for/kentuckyderby2026/" target="_blank">Donate to unlock more bets &rarr;</a>
         <div class="gate-divider"><span>Already have a code?</span></div>
         <div class="code-row">
           <input type="text" id="codeInput" placeholder="Enter your code" maxlength="10"/>
@@ -261,8 +244,9 @@
   </footer>
 
   <script>
-    // ── CODES: edit these to whatever words you want to use ──
-    // Format: 'CODE': number_of_additional_bets
+    const FORMSPREE_URL = 'https://formspree.io/f/mvzdvaqk';
+
+    // ── CODES: 'CODENAME': number_of_additional_bets ──
     const CODES = {
       'DERBY1': 1,
       'DERBY2': 2,
@@ -273,26 +257,12 @@
     const MAX_BETS = 5; // 1 free + up to 4 donated
 
     const horses = [
-      "Renegade (4-1 fav)",
-      "Commandment (5-1)",
-      "The Puma (10-1)",
-      "Chief Wallabee (10-1)",
-      "Emerging Market (15-1)",
-      "Potente (20-1)",
-      "Further Ado",
-      "Silent Tactic",
-      "Albus",
-      "Pavlovian",
-      "Right to Party",
-      "Incredibolt",
-      "Golden Tempo",
-      "So Happy",
-      "Fulleffort",
-      "Paladin",
-      "Litmus Test",
-      "Dueling Banjos",
-      "Mandate",
-      "Sandman"
+      "Renegade (4-1 fav)", "Commandment (5-1)", "The Puma (10-1)",
+      "Chief Wallabee (10-1)", "Emerging Market (15-1)", "Potente (20-1)",
+      "Further Ado", "Silent Tactic", "Albus", "Pavlovian",
+      "Right to Party", "Incredibolt", "Golden Tempo", "So Happy",
+      "Fulleffort", "Paladin", "Litmus Test", "Dueling Banjos",
+      "Mandate", "Sandman"
     ];
 
     let selectedType = null;
@@ -309,6 +279,7 @@
     const successCard = document.getElementById('successCard');
     const gateCard = document.getElementById('gateCard');
     const maxedNote = document.getElementById('maxedNote');
+    const sendingMsg = document.getElementById('sendingMsg');
 
     betGrid.querySelectorAll('.bet-chip').forEach(chip => {
       chip.addEventListener('click', () => {
@@ -363,7 +334,7 @@
     document.getElementById('nameInput').addEventListener('input', validate);
     document.getElementById('contactInput').addEventListener('input', validate);
 
-    submitBtn.addEventListener('click', () => {
+    submitBtn.addEventListener('click', async () => {
       const name = document.getElementById('nameInput').value.trim();
       const contact = document.getElementById('contactInput').value.trim();
       if (!name) { document.getElementById('nameErr').style.display = 'block'; return; }
@@ -374,6 +345,31 @@
       for (let i = 0; i < slots; i++) picks.push(document.getElementById('horse_' + i).value);
       const pickStr = picks.join(' / ');
       const wasFree = betsPlaced === 0;
+      const betNum = betsPlaced + 1;
+
+      // Disable button and show sending message
+      submitBtn.disabled = true;
+      sendingMsg.style.display = 'block';
+
+      // Send to Formspree
+      try {
+        await fetch(FORMSPREE_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            'Name': name,
+            'Contact': contact,
+            'Bet Number': betNum,
+            'Bet Type': selectedType,
+            'Horse Pick(s)': pickStr,
+            'Cost': wasFree ? 'Free' : 'Donated ($5-$20)'
+          })
+        });
+      } catch(e) {
+        // Fail silently — still show success to user
+      }
+
+      sendingMsg.style.display = 'none';
       betsPlaced++;
 
       document.getElementById('successTitle').textContent = wasFree ? 'Free Bet Placed!' : 'Bet Placed!';
@@ -413,21 +409,9 @@
       errEl.style.display = 'none';
       okEl.style.display = 'none';
 
-      if (!input) {
-        errEl.textContent = 'Please enter a code.';
-        errEl.style.display = 'block';
-        return;
-      }
-      if (usedCodes.includes(input)) {
-        errEl.textContent = 'This code has already been used.';
-        errEl.style.display = 'block';
-        return;
-      }
-      if (!CODES[input]) {
-        errEl.textContent = "That code isn't valid. Please check and try again.";
-        errEl.style.display = 'block';
-        return;
-      }
+      if (!input) { errEl.textContent = 'Please enter a code.'; errEl.style.display = 'block'; return; }
+      if (usedCodes.includes(input)) { errEl.textContent = 'This code has already been used.'; errEl.style.display = 'block'; return; }
+      if (!CODES[input]) { errEl.textContent = "That code isn't valid. Please check and try again."; errEl.style.display = 'block'; return; }
 
       const bonus = CODES[input];
       usedCodes.push(input);
